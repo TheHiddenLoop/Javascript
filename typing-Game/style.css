@@ -254,12 +254,6 @@ header h1 span {
     font-size: 1.2rem;
 }
 
-footer {
-    margin-top: 30px;
-    color: white;
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
 
 /* Loading animation */
 .loading {

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Converter</h1>
+      <div class="converter-card">
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" placeholder="Enter amount" />
+        </div>
+        
+        <div class="select-group">
+          <div class="select-container">
+            <label>From</label>
+            <select class="first">
+              <option value="">-- From Currency --</option>
+            </select>
+          </div>
+          
+          <div class="exchange-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M7 10h10l-3-3m0 10l3-3H7"/>
+            </svg>
+          </div>
+          
+          <div class="select-container">
+            <label>To</label>
+            <select class="second">
+              <option value="">-- To Currency --</option>
+            </select>
+          </div>
+        </div>
+        
+        <button id="convert">Convert</button>
+        
+        <div class="result-container">
+          <p id="result"></p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Real-time exchange rates</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

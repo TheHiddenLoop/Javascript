@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    height: 100px; 
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 10px; 
+}
+
+.color {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+#red { background-color: red; }
+#blue { background-color: blue; }
+#green { background-color: green; }
+#auqa { background-color: aqua; }
+#yellow { background-color: yellow; }
+#jali {
+    background: repeating-linear-gradient(
+        45deg,
+        white,
+        white 10px,
+        black 10px,
+        black 20px
+    );
+}

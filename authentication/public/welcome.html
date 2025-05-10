@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card welcome-card">
+            <div class="welcome-content">
+                <h2>Welcome!</h2>
+                <div class="checkmark-circle">
+                    <div class="checkmark"></div>
+                </div>
+                <p>Your email has been successfully verified.</p>
+                <p class="welcome-email" id="verified-email"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const email = urlParams.get('email');
+            if (email) {
+                document.getElementById('verified-email').textContent = email;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -18,8 +18,8 @@ const otpStore = {};
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "angeshchauhan44@gmail.com",
-    pass: "nvfnpuxtprenwuwc",
+    user: "xyz@gmail.com",
+    pass: "gmail_pass",
   },
 });
 

@@ -1,4 +1,4 @@
-const apikey="f41d954a3439847b2ee7e0d51e708833";
+const apikey="API-KEY";
 const input=document.querySelector("input");
 const btn=document.getElementById("btn");
 

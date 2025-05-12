@@ -1,0 +1,298 @@
+:root {
+    --primary-color: #6c5ce7;
+    --secondary-color: #a29bfe;
+    --x-color: #e84393;
+    --o-color: #00cec9;
+    --bg-color: #f9f9f9;
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * 0.8);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.player.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.player-x.active {
+    border-bottom: 3px solid var(--x-color);
+}
+
+.player-o.active {
+    border-bottom: 3px solid var(--o-color);
+}
+
+.player-label {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.player-x .player-label {
+    color: var(--x-color);
+}
+
+.player-o .player-label {
+    color: var(--o-color);
+}
+
+.score {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+    height: 30px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    margin-bottom: 30px;
+    perspective: 1000px;
+}
+
+.cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    position: absolute;
+    width: calc(var(--mark-size) * 0.15);
+    height: var(--mark-size);
+    background-color: var(--x-color);
+    border-radius: 10px;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+.cell.o::before {
+    content: '';
+    position: absolute;
+    width: var(--mark-size);
+    height: var(--mark-size);
+    border-radius: 50%;
+    border: calc(var(--mark-size) * 0.15) solid var(--o-color);
+    background-color: transparent;
+}
+
+.cell.x.win {
+    background-color: rgba(232, 67, 147, 0.2);
+}
+
+.cell.o.win {
+    background-color: rgba(0, 206, 201, 0.2);
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.winning-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    gap: 20px;
+    display: none;
+}
+
+.winning-message.show {
+    display: flex;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Responsive design */
+@media screen and (max-width: 500px) {
+    :root {
+        --cell-size: 80px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .game-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .player {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .controls {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.cell.x::before,
+.cell.x::after,
+.cell.o::before {
+    animation: drawIn 0.3s ease-in-out forwards;
+}
+
+@keyframes drawIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(45deg);
+    }
+}
+
+.cell.x::after {
+    animation: drawInReverse 0.3s ease-in-out forwards;
+}
+
+@keyframes drawInReverse {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotate(-45deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(-45deg);
+    }
+}
+
+.cell.o::before {
+    animation: drawInO 0.3s ease-in-out forwards;
+}
+
+@keyframes drawInO {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

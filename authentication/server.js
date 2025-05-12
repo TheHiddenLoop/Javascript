@@ -30,7 +30,7 @@ app.post("/send-otp", (req, res) => {
 
   transporter.sendMail(
     {
-      from: "angeshchauhan44@gmail.com",
+      from: "Email_Sender",
       to: email,
       subject: 'Your OTP Code',
       text: `Your OTP is: ${otp}`,

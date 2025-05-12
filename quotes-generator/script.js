@@ -14,7 +14,7 @@ function quotesGenerator() {
     author.innerHTML = "";
 
     fetch('https://api.api-ninjas.com/v1/quotes', {
-        headers: { 'X-Api-Key': 'zuZ+sKw+da4zOqxpVbJH/Q==YwCADUljlWHpDYol' }
+        headers: { 'X-Api-Key': 'API_KEY' }
     })
         .then(response => response.json())
         .then(data => {

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Text-to-Speech App</title>
+    <link rel="stylesheet" href="styles.css" />
+<!-- Add this in your <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <body>
+    
+    <h1>Text-to-Speech App</h1>
+    <div class="conatiner">
+      <textarea id="text" placeholder="Type something..."></textarea>
+
+      <div class="down">
+        <select id="voiceSelect"></select>
+
+        <button id="btn" onclick="speakText()"><i class="fa-solid fa-volume-high"></i> Speak</button>
+      </div>
+    </div>
+
+    <!-- ResponsiveVoice library -->
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=Pold3F4X"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

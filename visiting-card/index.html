@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luxury Business Card Generator</title>
+    <!-- Add Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Form Section -->
+      <div class="form-container">
+        <h2>Business Card Generator</h2>
+        <form id="cardForm">
+          <div class="form-group">
+            <label for="companyName">Company/Brand Name</label>
+            <input type="text" id="companyName" placeholder="YOUR LOGO" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="tagline">Tagline</label>
+            <input type="text" id="tagline" placeholder="YOUR TAGLINE HERE" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="personName">Full Name</label>
+            <input type="text" id="personName" placeholder="TOMMY SMITH" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="address">Address & Phone</label>
+            <input type="text" id="address" placeholder="ADDRESS FLOOR&#10;9555 7893" required></input>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email & Website</label>
+            <input type="text" id="email" placeholder="email@domain.com&#10;www.website.com" required></input>
+          </div>
+          
+          <div class="form-group">
+            <label for="website">Additional Websites</label>
+            <input type="text" id="website" placeholder="website.domain.com&#10;another.domain.com" required></input>
+          </div>
+          
+          <div class="form-group">
+            <label for="logoUpload">Upload Logo (Optional)</label>
+            <input type="file" id="logoUpload" accept="image/*">
+          </div>
+          
+          <button type="button" id="generateBtn">
+            <i class="fas fa-magic"></i> Generate Card
+          </button>
+        </form>
+      </div>
+      
+      <!-- Card Preview Section -->
+      <div class="preview-container">
+        <div class="card-container" id="cardContainer">
+          <div class="card-inner">
+            <!-- Front of Card -->
+            <div id="card-front" class="card">
+              <div class="flower-logo" id="frontLogo">
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="petal"></div>
+                <div class="center-circle"></div>
+              </div>
+              <h1 class="company-name">YOUR NAME</h1>
+              <p class="tagline">YOUR TAGLINE HERE</p>
+            </div>
+            
+            <!-- Back of Card -->
+            <div id="card-back" class="card">
+              <div class="back-left">
+                <div class="flower-logo back-logo" id="backLogo">
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="petal"></div>
+                  <div class="center-circle"></div>
+                </div>
+                <h2 class="person-name">TOMMY SMITH</h2>
+                <p class="back-tagline">YOUR TAGLINE HERE</p>
+              </div>
+              
+              <div class="divider"></div>
+              
+              <div class="back-right">
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <p class="contact-text">ADDRESS FLOOR<br>9555 7893</p>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                  <p class="contact-text">email@domain.com<br>www.website.com</p>
+                </div>
+                <div class="contact-item">
+                  <div class="contact-icon">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <p class="contact-text">website.domain.com<br>another.domain.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

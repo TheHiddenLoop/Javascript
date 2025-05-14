@@ -1,0 +1,357 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f1023;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 20px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.form-container {
+  flex: 1;
+  background-color: rgba(26, 28, 51, 0.8);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+}
+
+.form-container h2 {
+  color: #a67a53;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: flex;
+  margin-bottom: 5px;
+  color: #a67a53;
+  font-weight: 500;
+}
+input, textarea {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: rgba(15, 16, 35, 0.7);
+  border: 1px solid #a67a53;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #d4a76a;
+  box-shadow: 0 0 10px rgba(214, 167, 106, 0.5);
+  transform: translateY(-2px);
+}
+
+input:hover, textarea:hover {
+  border-color: #c99c6e;
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-style: italic;
+}
+
+input[type="file"] {
+  padding: 8px;
+  background-color: rgba(15, 16, 35, 0.5);
+  border-style: dashed;
+}
+
+input[type="file"]:hover {
+  background-color: rgba(30, 32, 60, 0.7);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #a67a53;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+input:focus + label, textarea:focus + label {
+  color: #d4a76a;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.form-group:hover {
+  transform: translateX(5px);
+}
+
+#generateBtn {
+  background: linear-gradient(135deg, #a67a53, #d4a76a);
+  color: #0f1023;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(166, 122, 83, 0.3);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#generateBtn:hover {
+  background: linear-gradient(135deg, #c99c6e, #e5c095);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(166, 122, 83, 0.4);
+}
+
+#generateBtn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(166, 122, 83, 0.3);
+}
+
+
+.preview-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+
+
+
+.card-container {
+  width: 500px;
+  height: 300px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card-container.flip .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #1a1c33;
+}
+
+#card-front {
+  text-align: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.company-name {
+      text-transform: uppercase;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #a67a53;
+  margin-bottom: 10px;
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+
+.tagline {
+  font-size: 1rem;
+    text-transform: uppercase;
+
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Back Card */
+#card-back {
+  transform: rotateY(180deg);
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 20px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.back-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.back-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 5px;
+}
+
+.person-name {
+  font-size: 1.2rem;
+    text-transform: uppercase;
+
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.back-tagline {
+  font-size: 0.8rem;
+  color: #a67a53;
+  letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.divider {
+  height: 80%;
+  width: 1px;
+  background-color: #a67a53;
+}
+
+.back-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #a67a53;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #1a1c33;
+}
+
+.contact-icon i {
+  font-size: 12px;
+}
+
+.contact-text {
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.flower-logo {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.petal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #a67a53;
+  border-radius: 50% 0;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(2) { transform: rotate(45deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(3) { transform: rotate(90deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(4) { transform: rotate(135deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(5) { transform: rotate(180deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(6) { transform: rotate(225deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(7) { transform: rotate(270deg) translate(-50%, -50%) scale(1.2); }
+.petal:nth-child(8) { transform: rotate(315deg) translate(-50%, -50%) scale(1.2); }
+
+.center-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #a67a53;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.uploaded-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-left: -20px;
+  margin-bottom: 20px;
+}
+
+.back-uploaded-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+
+

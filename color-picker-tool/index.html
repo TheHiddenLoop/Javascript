@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+  </head>
+  <body>
+    <div id="picker"></div>
+    
+    
+
+    <div class="info">
+      <div><strong>HEX</strong></div>
+      <div id="hexValue">#000000</div>
+      <button class="copy-btn" onclick="copyToClipboard('hexValue')">
+        Copy
+      </button>
+    </div>
+
+    <div class="info-box">
+      <div class="info">
+        <div><strong>RGB</strong></div>
+        <div id="rgbValue">---</div>
+      </div>
+      <div class="info">
+        <div><strong>CMYK</strong></div>
+        <div id="cmykValue">---</div>
+      </div>
+      <div class="info">
+        <div><strong>HSV</strong></div>
+        <div id="hsvValue">---</div>
+      </div>
+      <div class="info">
+        <div><strong>HSL</strong></div>
+        <div id="hslValue">---</div>
+      </div>
+    </div>
+<div id="toast" class="toast"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

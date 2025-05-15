@@ -1,0 +1,76 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #062241;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#picker {
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+#picker2 {
+  height:300px;
+  width: 300px;
+  background-color: red;
+}
+.info-box {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+.info {
+  background: #1e1e1e;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 120px;
+}
+
+
+button.copy-btn {
+  background-color: #206cc9;
+  border: none;
+  color: white;
+  padding: 14px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  
+  width: 120px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button.copy-btn:hover {
+  background-color: #17a087;
+}
+
+button.copy-btn::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+
+
+
+.toast {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, top 0.5s ease;
+  z-index: 1000;
+  font-size: 14px;
+}

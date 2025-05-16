@@ -1,0 +1,40 @@
+:root {
+  --bg-light: #f4f4f4;
+  --text-light: #333333;
+
+  --bg-dark: #121212;
+  --text-dark: #e0e0e0;
+}
+
+body {
+  background: var(--bg-light);
+  color: var(--text-light);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+.container {
+  text-align: center;
+}
+.icon {
+  font-size: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

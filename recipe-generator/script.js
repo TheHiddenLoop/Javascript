@@ -1,7 +1,7 @@
 const btn = document.getElementById("btn");
 const result = document.querySelector(".generate");
 const details = document.getElementById("details");
-const apiKey = ""; 
+const apiKey = "API_KEY"; 
 
 btn.addEventListener("click", async () => {
     const input = document.getElementById("input").value;

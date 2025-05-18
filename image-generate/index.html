@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lexica Image Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="generate-image-form">
+      <input type="text" id="input-value" placeholder="Enter a prompt..." />
+      <button id="btn" type="submit">Generate</button>
+    </form>
+
+    <div id="loader" class="hidden">
+      <div class="spinner"></div>
+    </div>
+
+
+
+    <p id="result"></p>
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

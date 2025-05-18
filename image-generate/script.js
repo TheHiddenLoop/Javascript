@@ -1,7 +1,7 @@
 const form = document.getElementById("generate-image-form");
 const input = document.getElementById("input-value");
 const result = document.getElementById("result");
-const ACCESS_KEY = "iqhuWde77Y6-nzXRrC1Wx-bp1uuCPkj6Tnc59y_laEg";
+const ACCESS_KEY = "API-KEY";
 const loader = document.getElementById("loader");
 
 form.addEventListener("submit", async (e) => {

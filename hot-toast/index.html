@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toast Notifications</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+</head>
+<body>
+  <div class="container">
+    <h1>Toast Notifications</h1>
+    <div class="buttons">
+      <button onclick="toast.success('Successfully saved!')">Success Toast</button>
+      <button onclick="toast.error('Failed to save data!')">Error Toast</button>
+      <button onclick="toast.loading('Loading data...')">Loading Toast</button>
+    </div>
+  </div>
+
+  <div id="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

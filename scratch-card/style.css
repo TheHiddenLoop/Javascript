@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1c1010;
+  margin: 0;
+  user-select: none;
+}
+
+.scratch-card-container {
+  width: 300px;
+  height: 400px;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.744);
+  overflow: hidden;
+  cursor: grab;
+}
+
+.scratch-card-container.scratching {
+  cursor: grabbing;
+}
+
+.scratch-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+}
+#scratch-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: #silver; */
+  border-radius: 10px;
+}

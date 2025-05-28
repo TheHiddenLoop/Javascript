@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <video id="video" autoplay></video>
+      <canvas
+        id="canvas"
+        width="400"
+        height="300"
+        style="display: none"
+      ></canvas>
+      <img id="snapshot" alt="Captured Image" />
+      <div id="newBtn">
+        <button id="open">On Camera</button>
+        <button id="close" style="display: none">Close Camera</button>
+        <button id="capture" style="display: none">Capture</button>
+        <button id="save" style="display: none">Save</button>
+        <button id="reset" style="display: none">Reset</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

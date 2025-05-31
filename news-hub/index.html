@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NewsHub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="nav">
+    <div id="logo">
+      <div class="logo-icon">
+        <div class="logo-circle"></div>
+        <div class="logo-lines">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <span class="logo-text">NewsHub</span>
+    </div>
+    <div id="input">
+      <input type="text" id="query" placeholder="Search for news..." />
+      <button id="btn">Search</button>
+    </div>
+    <nav id="menu">
+      <ul>
+        <li id="sport">Sports</li>
+        <li id="biss">Business</li>
+        <li id="fin">Finance</li>
+        <li id="trend">Trending</li>
+        <li id="tech">Technology</li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div id="container" class="container"></div>
+  </section>
+
+  <div id="articleModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modalTitle"></h2>
+        <button class="close-btn" id="closeModal">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img id="modalImage" src="placeholder.svg" alt="Article Image" />
+        <div class="modal-text">
+          <p id="modalDescription"></p>
+          <div class="modal-meta">
+            <span id="modalAuthor"></span>
+            <span id="modalDate"></span>
+          </div>
+          <a id="modalLink" href="" target="_blank" class="read-more-btn">Read Full Article</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

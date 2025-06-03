@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Document Management System:</h1>        
+        </header>
+
+        <div class="upload-section">
+            <div class="upload-area" id="dropArea">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Drag & Drop files here or click to browse</p>
+                <input type="file" id="fileInput" multiple hidden>
+            </div>
+            <button id="uploadBtn">Upload Documents</button>
+        </div>
+
+        <div class="filter-section">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search documents...">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="filter-options">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="pdf">PDF</option>
+                    <option value="doc">Word</option>
+                    <option value="img">Images</option>
+                    <option value="other">Other</option>
+                </select>
+                <select id="dateFilter">
+                    <option value="all">All Time</option>
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="documents-section">
+            <h2>Your Documents</h2>
+            <div class="documents-grid" id="documentsContainer">
+            </div>
+        </div>
+
+        <div id="documentModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2 id="modalTitle">Document Details</h2>
+                <div id="documentPreview"></div>
+                <div class="document-details">
+                    <p><strong>File Name:</strong> <span id="fileName"></span></p>
+                    <p><strong>File Type:</strong> <span id="fileType"></span></p>
+                    <p><strong>File Size:</strong> <span id="fileSize"></span></p>
+                    <p><strong>Upload Date:</strong> <span id="uploadDate"></span></p>
+                </div>
+                <div class="modal-actions">
+                    <button id="downloadBtn"><i class="fas fa-download"></i> Download</button>
+                    <button id="deleteBtn" class="delete-btn"><i class="fas fa-trash"></i> Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

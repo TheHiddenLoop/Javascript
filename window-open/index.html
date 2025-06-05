@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Source+Sans+Pro:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="btn">Details</button>
+    </div>
+
+   <div id="articleModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 id="modalTitle">The Future of Technology</h2>
+            <button class="close-btn" id="closeModal">
+                <span>&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <img
+                id="modalImage"
+                src="https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aab?w=500&h=350&fit=crop"
+                alt="Article Image"
+            />
+            <div class="modal-text">
+                <p id="modalDescription">
+                    Explore how AI, IoT, and quantum computing are shaping the world of tomorrow.
+                    This article delves into emerging innovations and their impact on daily life,
+                    industry, and society.
+                </p>
+                <div class="modal-meta">
+                    <span id="modalAuthor">By John Doe</span> |
+                    <span id="modalDate">June 5, 2025</span>
+                </div>
+                <a
+                    id="modalLink"
+                    href="https://example.com/full-article"
+                    target="_blank"
+                    class="read-more-btn"
+                >
+                    Read Full Article
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

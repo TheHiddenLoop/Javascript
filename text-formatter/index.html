@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Formatter</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app-container">
+        <h1>Text Formatter</h1>
+
+        <div>
+            <label for="inputText">Enter your text:</label>
+            <textarea
+                id="inputText"
+                placeholder="Type your text here..."
+                spellcheck="false"
+            ></textarea>
+        </div>
+
+        <div>
+            <label>Choose formatting options:</label>
+            <div class="button-grid">
+                <button id="boldBtn" class="format-button">Bold</button>
+                <button id="italicBtn" class="format-button">Italic</button>
+                <button id="underlineBtn" class="format-button">Underline</button>
+                <button id="uppercaseBtn" class="format-button">UPPERCASE</button>
+                <button id="lowercaseBtn" class="format-button">lowercase</button>
+                <button id="capitalizeBtn" class="format-button">Capitalize Words</button>
+            </div>
+        </div>
+
+        <div>
+            <label for="outputResult">Formatted text:</label>
+            <div id="outputResult" class="formatted-output"></div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

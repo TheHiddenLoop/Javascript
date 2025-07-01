@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tabbed Interface</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="tabs">
+    <div class="tab-buttons">
+      <button class="tab-btn active" data-tab="tab1">About</button>
+      <button class="tab-btn" data-tab="tab2">Projects</button>
+      <button class="tab-btn" data-tab="tab3">Contact</button>
+    </div>
+
+    <div class="tab-content active" id="tab1">
+      <h2>About Me</h2>
+      <p>Hello! I'm a passionate front-end developer with a love for building interactive user interfaces using HTML, CSS, and JavaScript. I enjoy solving real-world problems through clean and efficient code.</p>
+    </div>
+
+    <div class="tab-content" id="tab2">
+      <h2>Projects</h2>
+      <ul>
+        <li><strong>Weather App:</strong> A simple app that fetches weather data using an API.</li>
+        <li><strong>To-Do List:</strong> A task manager with localStorage integration.</li>
+        <li><strong>Portfolio Website:</strong> A responsive website showcasing my skills and work.</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="tab3">
+      <h2>Contact</h2>
+      <p>You can reach me at:</p>
+      <ul>
+        <li>Email: developer@example.com</li>
+        <li>Phone: +91 9876543210</li>
+        <li>GitHub: <a href="https://github.com/yourusername" target="_blank">yourusername</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

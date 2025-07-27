@@ -1,0 +1,349 @@
+/* Reset for margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling to ensure proper viewport height */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow-x: hidden; /* Prevent any unwanted horizontal scrolling */
+}
+
+/* Video background section */
+.video-background {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the video covers the entire section */
+    z-index: -1;
+}
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 40px;
+    z-index: 1;
+}
+
+.logo img {
+    height: 80px;
+}
+
+/* Navigation bar */
+nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    font-size: 1.2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f60505;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: rgb(125, 125, 239);
+}
+
+/* Button styling */
+.bt {
+    padding: 10px 20px;
+    background-color: #e91e63;
+    font-weight: bolder;
+    color: black;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.bt:hover {
+    background-color: #040001;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+/* Full-screen image section */
+.limg {
+    position: relative;
+    top: -7px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent any unwanted overflow */
+    z-index: 1;
+}
+
+.limg img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures the image covers the entire section without distortion */
+}
+
+/* Text styling inside image section */
+.txt {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    z-index: 2;
+    color: white;
+    font-size: 1.3rem;
+    text-align: left;
+    width: 30vw;
+    line-height: 1.3;
+}
+
+.txt h1 {
+    text-align: center;
+    width: 350px;
+}
+
+/* Button styles for TOK Education and TOC Business */
+.txt button {
+    height: 30px;
+    color: white;
+    gap: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 150px;
+}
+
+.txt .tt {
+    background-color: rgb(236, 104, 124);
+}
+
+.txt .ttt {
+    background-color: rgb(97, 163, 163);
+}
+
+.txt .tt:hover {
+    background-color: black;
+}
+
+.txt .ttt:hover {
+    background-color: black;
+}
+
+/* Container section */
+.contain {
+    position: relative;
+    top: -7px;
+    display: flex;
+    height: 435px;
+    background-color: #001743;
+    width: 100vw;
+    align-items: center;
+    justify-content: right;
+    gap: 20px;
+    padding: 20px 0; /* Ensure there's padding between the container and viewport edge */
+}
+
+.contain .imgs {
+    display: flex;
+}
+
+.contain .imgs img {
+    height: 350px;
+    object-fit: contain; /* Ensure the image fits nicely without overflowing */
+}
+
+.contain .data {
+    margin-left: 30px;
+    width: 50%;
+    color: whitesmoke;
+    font-size: 1.3rem;
+}
+
+.contain .data button {
+    height: 35px;
+    border-radius: 10px;
+    background-color: #ff007f;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.contain .data button:hover {
+    background-color: black;
+}
+.cont3 {
+    position: relative;
+    top: -7px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Prevent any unwanted overflow */
+    z-index: 1;
+}
+
+.cont3 img {
+    position: relative;
+    width: 100vw;
+    height: 80vh;
+    
+}
+.cont3 .txt3{
+    display: flex table-column;
+    position: absolute;
+    width: 400px;
+    justify-content: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(20%,-40% );
+    color: whitesmoke;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    
+}
+.txt3 .bt4{
+    background-color: #ff007f;
+    height: 40px;
+    width: 130px;
+    border-radius: 10px;
+    transform: translate(0,100% );
+    font-weight: bolder;
+    color: black;
+}
+.txt3 .bt4:hover{
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+.back{
+    position: relative;
+    background-color: #fba01e;
+    top: -21%;
+    height: 50vh;
+}
+
+.back .few{
+    display: flex table-column1;
+    height: 200px;
+    width: 60vw;
+    
+    color: whitesmoke;
+    transform: translate(20%,30%);
+}
+.back .few ins{
+    font-size: 40px;
+    text-decoration: none;
+    line-height: 1.5;
+}
+.back .few button{
+    height: 35px;
+    font-size: 15px;
+    width: 130px;
+    border-radius: 10px;
+    background-color:#ff007f ;
+    color: black;
+    font-weight: bolder;
+}
+.back .few button:hover{
+    background-color: black;
+    color: white;
+    width: 130px;
+    font-weight: bolder;
+}
+.back .imgs{
+    justify-content: center;
+    transform: translate(70%,-51%);
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 60vh;
+    top: -21%;
+}
+
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444;
+}
+
+.footer-column {
+    width: 23%;
+}
+
+.footer-column h4 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto 0;
+}
+
+.social-links a {
+    margin-right: 15px;
+    color: #ccc;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #888;
+}
